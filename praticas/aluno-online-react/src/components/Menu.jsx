@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import logo from "../assets/learn.svg";
 
 export default function Menu() {
@@ -8,13 +9,55 @@ export default function Menu() {
         <h1 className="text-lg font-bold">Aluno online</h1>
       </header>
       <nav className="mt-12">
-        <ul className="font-semibold">
-          <li>Dashboard</li>
-          <li>Notas</li>
-          <li>Faltas</li>
-          <li>Boletos</li>
-          <li>Requerimentos</li>
-          <li>Sair</li>
+        <ul className="font-semibold flex flex-col gap-4">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "underline font-bold" : ""
+            }
+          >
+            Dashboard
+          </NavLink>
+          <NavLink
+            to="/notas"
+            className={({ isActive }) =>
+              isActive ? "underline font-bold" : ""
+            }
+          >
+            Notas
+          </NavLink>
+          <NavLink
+            to="/faltas"
+            className={({ isActive }) =>
+              isActive ? "underline font-bold" : ""
+            }
+          >
+            Faltas
+          </NavLink>
+          <NavLink
+            to="/boletos"
+            className={({ isActive }) =>
+              isActive ? "underline font-bold" : ""
+            }
+          >
+            Boletos
+          </NavLink>
+          <NavLink
+            to="/requerimentos"
+            className={({ isActive }) =>
+              isActive ? "underline font-bold" : ""
+            }
+          >
+            Requerimentos
+          </NavLink>
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive ? "underline font-bold" : ""
+            }
+          >
+            Sair
+          </NavLink>
         </ul>
       </nav>
     </aside>
